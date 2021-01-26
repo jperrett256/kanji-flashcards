@@ -5,6 +5,12 @@ It contains 1945 kanji and information regarding the corresponding Chinese chara
 
 This table has not been updated to match the late 2010 revision of the jōyō kanji, in which 196 characters were added and 5 characters were removed, for a total of 2136 characters.
 
-# Process
+# Process Overview
 
 Data has been exported from the PDF and transformed into a more useful format.
+
+# Scripts
+
+- comparative_list_text_to_csv.py
+
+This converts the extracted joyo kanji table into a csv table with a format that is more suitable for flashcards. Each row has the actual characters in it, if it exists (rather than a quotation mark to indicate it is the same as the kanji). There is an extra entry_type field, which indicates how the three characters relate to one another (i.e. which are same and which are different).
