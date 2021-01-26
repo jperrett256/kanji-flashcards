@@ -7,4 +7,4 @@ This table has not been updated to match the late 2010 revision of the jōyō ka
 
 # Process
 
-Here, data has been exported from the PDF, with the intention of transforming it into a more useful format.
+Data has been exported from the PDF and transformed into a more useful format.
