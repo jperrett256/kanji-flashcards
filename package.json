@@ -1,0 +1,15 @@
+{
+  "name": "kanji-flashcards",
+  "version": "1.0.0",
+  "description": "A comparitive table of jōyō kanji, tradional Chinese characters and simplified Chinese characters may be found at [this drive link](https://drive.google.com/file/d/0B_v5DhUsRRWgeXFINWRRM1BUTjA/view), linked to from this [blog post](http://taretz.blogspot.com/2008/07/3000-most-frequently-used-chinese.html).\r It contains 1945 kanji and information regarding the corresponding Chinese characters.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv": "^5.3.2",
+    "puppeteer": "^5.5.0"
+  }
+}
