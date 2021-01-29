@@ -5,14 +5,20 @@
 			<span class="annotation">kanji</span>
 		</div>
 	</div>
-	<div class="layer chinese">
+	<div class="layer chinese" id="separated-chinese">
 		<div class="char-group">
-			<span class="char" id="traditional">{{Traditional Chinese}}</span>
+			<span class="char" id="traditional-char">{{Traditional Chinese}}</span>
 			<span class="annotation">traditional</span>
 		</div>
 		<div class="char-group">
-			<span class="char" id="simplified">{{Simplified Chinese}}</span>
+			<span class="char" id="simplified-char">{{Simplified Chinese}}</span>
 			<span class="annotation">simplified</span>
+		</div>
+	</div>
+	<div class="layer chinese" id="combined-chinese">
+		<div class="char-group">
+			<span class="char" id="combined-char">{{Simplified Chinese}}</span>
+			<span class="annotation">traditional/simplified</span>
 		</div>
 	</div>
 </div>
@@ -51,11 +57,31 @@
 <script>
 	let entry_type = '{{Entry Type String}}';
 
-	if (entry_type == 'AAA' || entry_type == 'AAB') {
-		document.getElementById('traditional').style = 'opacity: 0.4';
+	// if the chinese characters are the same (traditional/simplified) then only show one
+	if (entry_type == 'ANN' || entry_type == 'AAA' || entry_type == 'ABB') {
+		document.getElementById('separated-chinese').style = "display: none";
+
+		// need placeholder for chinese if kanji is native japanese
+		if (entry_type == 'ANN') {
+			document.getElementById('combined-char').innerHTML = '-';
+		}
+
+		// assertion
+		if ('{{Traditional Chinese}}' != '{{Simplified Chinese}}') {
+			document.getElementById('combined-char').innerHTML = 'ERROR';
+		}
+	} else {
+		document.getElementById('combined-chinese').style = "display: none";
 	}
 
-	if (entry_type == 'AAA' || entry_type == 'ABA') {
-		document.getElementById('simplified').style = 'opacity: 0.4';
+	// set opacity based on whether it is the same as the kanji
+	if (entry_type == 'AAA') {
+		document.getElementById('combined-char').style = 'opacity: 0.4';
+	}
+	if (entry_type == 'AAB') {
+		document.getElementById('traditional-char').style = 'opacity: 0.4';
+	}
+	if (entry_type == 'ABA') {
+		document.getElementById('simplified-char').style = 'opacity: 0.4';
 	}
 </script>
