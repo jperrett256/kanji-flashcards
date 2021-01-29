@@ -1,0 +1,61 @@
+<div class="character-comparison">
+	<div class="layer">
+		<div class="char-group">
+			<span class="char">{{Kanji}}</span>
+			<span class="annotation">kanji</span>
+		</div>
+	</div>
+	<div class="layer chinese">
+		<div class="char-group">
+			<span class="char" id="traditional">{{Traditional Chinese}}</span>
+			<span class="annotation">traditional</span>
+		</div>
+		<div class="char-group">
+			<span class="char" id="simplified">{{Simplified Chinese}}</span>
+			<span class="annotation">simplified</span>
+		</div>
+	</div>
+</div>
+
+<hr>
+
+<div class="meaning">
+	<span>{{Meaning}}</span>
+</div>
+
+<hr>
+
+<div class="pronunciations">
+	<table>
+		<tr>
+			<td class="annotation">On'yomi:</td>
+			<td class="kana">{{On'yomi}}</td>
+		</tr>
+		<tr>
+			<td class="annotation">Kun'yomi:</td>
+			<td class="kana">{{Kun'yomi}}</td>
+		</tr>
+		<tr>
+			<td class="annotation">Nanori:</td>
+			<td class="kana">{{Nanori}}</td>
+		</tr>
+	</table>
+</div>
+
+<hr>
+
+<div class="compounds">
+	{{Compounds}}
+</div>
+
+<script>
+	let entry_type = '{{Entry Type String}}';
+
+	if (entry_type == 'AAA' || entry_type == 'AAB') {
+		document.getElementById('traditional').style = 'opacity: 0.4';
+	}
+
+	if (entry_type == 'AAA' || entry_type == 'ABA') {
+		document.getElementById('simplified').style = 'opacity: 0.4';
+	}
+</script>

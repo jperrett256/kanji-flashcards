@@ -1,0 +1,64 @@
+.card {
+	font-size: 20px;
+	text-align: center;
+	color: black;
+	background-color: white;
+	font-family: Source Han Sans JP;
+}
+
+hr {
+	margin-top: 16px;
+	margin-bottom: 16px
+}
+
+
+.chinese {
+	font-family: Source Han Sans CN;
+}
+
+.character-comparison {
+	text-align: center;
+}
+
+.character-comparison .layer {
+	display: flex;
+	justify-content: center;
+}
+
+.character-comparison .char-group {
+	display: flex;
+	flex-direction: column;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.character-comparison .annotation {
+	font-size: 8px;
+}
+
+
+.meaning {
+	font-size: 16px;
+}
+
+.pronunciations {
+	display: flex;
+	justify-content: center;
+}
+
+.pronunciations table {
+	text-align: left;
+}
+
+.pronunciations .annotation {
+	font-size: 12px;
+}
+
+.pronunciations .kana {
+	font-size: 18px;
+}
+
+
+.compounds {
+	font-size: 16px;
+}
